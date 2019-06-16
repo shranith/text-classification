@@ -1,42 +1,70 @@
-A setup script based on environment
+# A ToDo Checklist
+
+## Initial Setup
+
+A setup script based on environment Linux vs Mac
+Like have a Requirement.txt file
 Install
-	Python
-	Pytorch
+
+* Python
+* Pytorch
+
 GPU vs Non GPU
 
-Randomly initialized embeddings
-vs all other embedding types
+## Preprocessing
 
+lower-casing, standardizing new lines, removing junk
 
-#Productionizing
-Batching
-PyLint Score
-Iterative loading of train file
-Comments
-Set Random Seed
-Quantization or 16 bit precision at train time
-try catch block
-Unit Tests
+For document classification:
 
+* Number of sentences per document
+* Number of words: Truncate long sentences to these many words
 
+## Embeddings
 
-Approaches:
-CNN
-RNN
-LSTM
-RCNN
-Attention
-Hierarchical Attention nw for Doc Classification
+* Glove
+* Word2vec
+* FastText
+* Elmo/Bert
 
-BagofWords
-SVM
-NaiveBayes
-Decision Trees
-Random Forest
+## Training time
 
+* Visualize Loss - TensorBoard, Visualize saved model
+* GPU vs Non GPU
+* Different Loss functions
+  * BCE Loss
+* Different Optimizers
+  * Adam
+  * AdaBound
+  * AdaGrad
 
+## Productionizing
 
-Embeddings:
-Glove
-Word2vec
-Elmo/Bert
+* Batching at Predict time
+* PyLint Score
+* Iterative loading of train file
+* Well Commented Code
+* Set Random Seed
+* Quantization or 16 bit precision at train time
+* Everything in try catch block
+* Unit Tests
+* Dockerized version
+
+## Approaches
+
+### Deep Learning Based
+
+* CNN
+* RNN
+* LSTM
+* RCNN
+* Attention
+* Hierarchical Attention nw for Doc Classification
+
+### Statistical Based
+
+* BagofWords
+* SVM
+* NaiveBayes
+* Decision Trees
+* Random Forest
